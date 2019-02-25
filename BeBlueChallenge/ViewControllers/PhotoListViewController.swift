@@ -28,6 +28,7 @@ class PhotoListViewController: UIViewController, PhotoListViewModelDelegate {
     func setup(){
         self.collectionView.register(UINib.init(nibName: "RoverImagesCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "roverImagesCell")
         executeRequestTasks(delegate: self, rover: .Curiosity, date: nil)
+        self.title = "Mars Rovers Photos"
     }
     
     func updateInterface(photoList: PhotoList) {
